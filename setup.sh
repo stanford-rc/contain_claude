@@ -41,8 +41,12 @@ echo
 echo "=== Setup complete ==="
 echo
 echo "Usage:"
+echo "  You can export your Anthropic API key as an env var or just log-in with your account on launch."
+echo "  contain_claude runs sync automatically every 3 seconds. sync_claude requires manual syncing, but will sync automatically on container close."
 echo "  export ANTHROPIC_API_KEY=sk-ant-..."
-echo "  ./claude-sandbox.sh /path/to/your/project"
+echo "  Instructions in readme for aliasing command so you don't have to keep track of the .sh"
+echo "  ./claude-sandbox.sh /path/to/your/project   # autosync to project dir"
+echo "  ./claude-sync.sh /path/to/your/project      # manual sync"
 echo
 echo "Claude will run inside Docker with only that project directory accessible."
 echo "Changes sync bidirectionally via unison every few seconds."
